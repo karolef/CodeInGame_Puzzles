@@ -1,3 +1,1 @@
-# CodeInGame_Puzzles
-
-CodeInGame puzzle solutions
+# CodeInGame puzzle solutions
