@@ -1,0 +1,42 @@
+import sys
+import math
+
+l = int(input())
+h = int(input())
+t = input()
+
+for i in range(h):
+    row = input()
+    row_length = len(row)
+    number_of_letters = int(row_length / l)
+    #print(number_of_letters)
+    
+    ascii = ''
+    
+    for letter in t:
+        if letter.isupper():
+            #print(letter)
+            char_ord_1 = (ord(letter) - 65) * (l)
+            #print(char_ord_1)
+            char_ord_2 = char_ord_1 + l
+            #print(char_ord_2)
+        
+        elif letter.islower():
+            #print(letter)
+            char_ord_1 = (ord(letter) - 97) * (l)
+            #print(char_ord_1)
+            char_ord_2 = char_ord_1 + l
+            #print(char_ord_2)
+        
+        else:
+            #print(letter)
+            char_ord_1 = 104
+            #print(char_ord_1)
+            char_ord_2 = char_ord_1 + l
+            #print(char_ord_2)
+
+
+        ascii += str(row[char_ord_1:char_ord_2])
+        #print(ascii)
+
+    print(ascii)
