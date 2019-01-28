@@ -1,14 +1,18 @@
-# WORK IN PROGRESS (last condition fails probably because of spaces)
-
 import sys
 import math
 
 message = input()
 
-bin_message = ''.join(format(ord(letter), 'b') for letter in message)
+bin_message = ''
 
-if len(bin_message) < 7:
-    bin_message = '0' + bin_message
+for letter in message:
+    temp_bin = bin(ord(letter))[2:]
+    #print(temp_bin)
+    
+    if len(temp_bin) < 7:
+        temp_bin = '0' + temp_bin
+    bin_message += temp_bin
+        
 #print(bin_message)
 
 is_zero = '00 '
