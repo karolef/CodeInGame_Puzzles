@@ -1,3 +1,5 @@
+# WORK IN PROGRESS (last condition fails probably because of spaces)
+
 import sys
 import math
 
